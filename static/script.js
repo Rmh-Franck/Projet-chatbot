@@ -107,7 +107,7 @@ document.addEventListener("alpine:init", () => {
             }else if(this.step == 4){
               this.mockres = "Quel est le film que vous aimez le moins ?"
             }else if(this.step == 6){
-              this.mockres= "Êtes vous prêts à recevoir les recommendations ?"
+              this.mockres= "Êtes vous prêt à recevoir les recommendations ?"
             }
 
           }

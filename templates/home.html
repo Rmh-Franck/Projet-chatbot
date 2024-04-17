@@ -41,7 +41,7 @@
         <div class="fixed inset-x-0 bottom-0 bg-gray-200">
           <form class="max-w-screen-lg m-auto w-full p-4 flex space-x-4 justify-center items-center" @submit.prevent="sendMessage">
             <input id="message" type="text" autocomplete="off" class="border rounded-md p-2 flex-1 border-gray-300" x-model="newMessage" placeholder="Your message..." />
-            <button class="bg-gray-800 text-white px-4 py-2 rounded-md" :class="{'opacity-50' : waitingOnResponse}">Send</button>
+            <button class="bg-green-800 text-white px-4 py-2 rounded-md" :class="{'opacity-50' : waitingOnResponse}">Send</button>
           </form>
         </div>
       </div>
