@@ -1,21 +1,4 @@
 
-/* Sélection du bouton et de l'élément par leur ID
-const button = document.getElementById('my-button');
-const element = document.getElementById('my-element');
-
-// Ajout d'un écouteur d'événements pour le clic sur le bouton
-button.addEventListener('click', function() {
-  // Envoi d'une requête HTTP au serveur lorsque le bouton est cliqué
-  fetch('/click')
-    .then(response => response.text())
-    .then(data => {
-      // Affichage de la réponse du serveur dans l'élément HTML
-      element.textContent = data;
-      console.log(response.text);
-      console.log(data);
-    });
-});*/
-
 import Alpine from "https://cdn.skypack.dev/alpinejs@3.11.1";
 
 //Demo variables
@@ -126,7 +109,8 @@ document.addEventListener("alpine:init", () => {
                     if(movie.release_date != null){
                     this.mockres += `(${movie.release_date})`;
                     }
-                    this.mockres += `<br>`;
+                    this.mockres +=`<br><br>Description:<br> ${movie.overview}`
+                    this.mockres += `<br><br>`;
                   }
             }
             this.mockres+= "<br><br> Si vous voulez obtenir des recommendations en utilisant d'autres préférences,<br>vous pouvez directement m'envoyer votre nouveau film préféré!"

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request
 import requests
 import json
 
@@ -207,40 +207,6 @@ def click():
 
     # Renvoi d'une réponse au client
     return 'Le bouton a été cliqué !'
-
-
-
-
-#def main():
-    print("Bienvenue au Chatbot de Recommandation de Films !")
-    favorite_movie_title = ask_question("Quel est ton film préféré ?")
-    favorite_movies = search_movies(favorite_movie_title)
-    display_movies(favorite_movies)
-    favorite_movie = choose_movie(favorite_movies)
-
-
-    liked_movie_title = ask_question("Quel est un film que tu aimes bien ?")
-    liked_movies = search_movies(liked_movie_title)
-    display_movies(liked_movies)
-    liked_movie = choose_movie(liked_movies)
-
-
-    disliked_movie_title = ask_question("Quel est un film que tu n'aimes pas ?")
-    disliked_movies = search_movies(disliked_movie_title)
-    display_movies(disliked_movies)
-    disliked_movie = choose_movie(disliked_movies)
-
-
-    if favorite_movie and liked_movie and disliked_movie:
-        recommendations = get_recommendations(favorite_movie['id'], liked_movie['id'], disliked_movie['id'])
-        if recommendations:
-            print("\nVoici trois films que tu pourrais aimer :")
-            for movie in recommendations:
-                display_movie_details(movie)
-        else:
-            print("Désolé, nous n'avons pas pu trouver de recommandations pour toi.")
-    else:
-        print("Désolé, certains films que tu as indiqués n'ont pas été trouvés.")
 
 
 if __name__ == '__main__':
