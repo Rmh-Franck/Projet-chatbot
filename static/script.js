@@ -129,7 +129,7 @@ document.addEventListener("alpine:init", () => {
                     this.mockres += `<br>`;
                   }
             }
-            this.mockres+= "<br><br> Si vous voulez obtenir des recommendations en utilisant d'autres préférences,<br>Vous pouvez directement m'envoyer votre nouveau film préféré!"
+            this.mockres+= "<br><br> Si vous voulez obtenir des recommendations en utilisant d'autres préférences,<br>vous pouvez directement m'envoyer votre nouveau film préféré!"
             this.step= 0
           }
           if(this.error){
